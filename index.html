@@ -13,92 +13,95 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html,body{font-family:'Inter',sans-serif;background:#f0f0eb;color:#1a1a1a;font-size:14px;-webkit-font-smoothing:antialiased;overscroll-behavior:none;}
 .screen{max-width:430px;margin:0 auto;padding-bottom:100px;}
-.appbar{background:#fff;border-bottom:1px solid #e8e8e8;padding:14px 16px 10px;text-align:center;position:sticky;top:0;z-index:30;box-shadow:0 2px 8px rgba(0,0,0,.06);}
-.appbar-name{font-size:18px;font-weight:700;color:#1a56db;letter-spacing:-.3px;}
-.appbar-sub{font-size:11px;color:#bbb;font-weight:500;margin-top:1px;}
-.topnav{display:flex;background:#fff;border-bottom:1px solid #e4e4e4;position:sticky;top:64px;z-index:20;box-shadow:0 1px 4px rgba(0,0,0,.04);}
-.tnbtn{flex:1;padding:12px 4px 10px;font-size:11px;font-weight:700;border:none;background:transparent;color:#aaa;cursor:pointer;border-bottom:3px solid transparent;font-family:'Inter',sans-serif;letter-spacing:.01em;}
+.appbar{background:linear-gradient(135deg,#1a56db 0%,#2563eb 100%);padding:16px 16px 12px;text-align:center;position:sticky;top:0;z-index:30;box-shadow:0 2px 12px rgba(26,86,219,.3);}
+.appbar-name{font-size:20px;font-weight:700;color:#fff;letter-spacing:-.3px;}
+.appbar-sub{font-size:11px;color:rgba(255,255,255,.65);font-weight:500;margin-top:2px;}
+.topnav{display:flex;background:#fff;border-bottom:1px solid #e4e4e4;position:sticky;top:68px;z-index:20;box-shadow:0 1px 4px rgba(0,0,0,.06);}
+.tnbtn{flex:1;padding:13px 4px 11px;font-size:11px;font-weight:700;border:none;background:transparent;color:#aaa;cursor:pointer;border-bottom:3px solid transparent;font-family:'Inter',sans-serif;letter-spacing:.01em;display:flex;flex-direction:column;align-items:center;gap:3px;}
 .tnbtn.active{color:#1a56db;border-bottom-color:#1a56db;}
+.tnbtn-icon{font-size:16px;}
 .pg{display:none;padding:14px 14px 0;}
 .pg.show{display:block;}
-.card{background:#fff;border:1px solid #e8e8e8;border-radius:16px;padding:16px 18px;margin-bottom:14px;box-shadow:0 1px 4px rgba(0,0,0,.04);}
+.card{background:#fff;border:1px solid #e8e8e8;border-radius:18px;padding:16px 18px;margin-bottom:14px;box-shadow:0 2px 8px rgba(0,0,0,.05);}
 .stitle{font-size:11px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.07em;margin-bottom:12px;}
-.hero{background:linear-gradient(135deg,#1a56db 0%,#3b82f6 100%);border-radius:18px;padding:20px;margin-bottom:14px;color:#fff;}
-.hero-label{font-size:12px;font-weight:500;opacity:.75;margin-bottom:4px;}
-.hero-amount{font-size:36px;font-weight:700;letter-spacing:-.5px;margin-bottom:2px;}
+.hero{background:linear-gradient(135deg,#1a56db 0%,#3b82f6 100%);border-radius:20px;padding:22px 20px;margin-bottom:14px;color:#fff;box-shadow:0 4px 20px rgba(26,86,219,.25);}
+.hero-label{font-size:12px;font-weight:500;opacity:.75;margin-bottom:4px;display:flex;align-items:center;gap:6px;}
+.hero-amount{font-size:38px;font-weight:700;letter-spacing:-.8px;margin-bottom:2px;}
 .hero-sub{font-size:12px;opacity:.7;}
 .pbg{height:10px;border-radius:6px;background:#eee;overflow:hidden;margin:7px 0 5px;}
 .pbg-sm{height:7px;border-radius:4px;background:#eee;overflow:hidden;margin:5px 0 3px;}
-.pf{height:100%;border-radius:6px;transition:width .35s ease;}
+.pf{height:100%;border-radius:6px;transition:width .4s ease;}
 .blrow{display:flex;justify-content:space-between;font-size:11px;color:#aaa;}
 .smgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;}
-.sm{background:#fff;border:1px solid #e8e8e8;border-radius:14px;padding:14px;box-shadow:0 1px 3px rgba(0,0,0,.04);}
-.sml{font-size:11px;color:#aaa;margin-bottom:4px;font-weight:500;}
-.smv{font-size:21px;font-weight:700;letter-spacing:-.3px;}
+.sm{background:#fff;border:1px solid #e8e8e8;border-radius:16px;padding:14px 15px;box-shadow:0 1px 4px rgba(0,0,0,.05);}
+.sml{font-size:11px;color:#aaa;margin-bottom:4px;font-weight:500;display:flex;align-items:center;gap:4px;}
+.smv{font-size:20px;font-weight:700;letter-spacing:-.3px;}
 .c-green{color:#0e7d4f;}.c-warn{color:#c47b0a;}.c-red{color:#c0392b;}.c-blue{color:#1a56db;}.c-dark{color:#1a1a1a;}.c-purple{color:#7c3aed;}
 .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px;}
-.cat-btn{padding:14px 6px 12px;border-radius:14px;border:2px solid #eee;background:#fafafa;text-align:center;cursor:pointer;transition:all .15s;-webkit-tap-highlight-color:transparent;}
-.cat-btn:active{transform:scale(.95);}
-.cat-btn.sel{border-color:#1a56db;background:#eff6ff;}
-.cat-icon{font-size:24px;display:block;margin-bottom:5px;}
+.cat-btn{padding:15px 6px 12px;border-radius:16px;border:2px solid #eee;background:#fafafa;text-align:center;cursor:pointer;transition:all .15s;-webkit-tap-highlight-color:transparent;}
+.cat-btn:active{transform:scale(.93);}
+.cat-btn.sel{border-color:#1a56db;background:#eff6ff;box-shadow:0 0 0 3px rgba(26,86,219,.1);}
+.cat-icon{font-size:26px;display:block;margin-bottom:6px;}
 .cat-label{font-size:11px;font-weight:600;color:#555;line-height:1.3;}
 .cat-btn.sel .cat-label{color:#1a56db;}
 .amt-wrap{position:relative;margin-bottom:12px;}
-.amt-prefix{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:18px;font-weight:600;color:#bbb;}
-.qa-amt{width:100%;font-size:34px;font-weight:700;padding:14px 16px 14px 64px;border:2px solid #e8e8e8;border-radius:14px;background:#fafafa;color:#1a1a1a;outline:none;font-family:'Inter',sans-serif;letter-spacing:-.5px;}
-.qa-amt:focus{border-color:#1a56db;background:#fff;}
-.qa-inp{width:100%;font-size:14px;padding:11px 14px;border:1.5px solid #e8e8e8;border-radius:12px;background:#fafafa;color:#1a1a1a;outline:none;margin-bottom:10px;font-family:'Inter',sans-serif;}
-.qa-inp:focus{border-color:#1a56db;background:#fff;}
-.add-big{width:100%;padding:16px;font-size:16px;font-weight:700;border-radius:14px;border:none;background:#1a56db;color:#fff;cursor:pointer;font-family:'Inter',sans-serif;transition:background .15s,transform .1s;margin-top:4px;-webkit-tap-highlight-color:transparent;}
-.add-big:disabled{background:#c8d5eb;cursor:not-allowed;}
-.add-big:active:not(:disabled){background:#1648c0;transform:scale(.98);}
-.txn{display:flex;align-items:center;padding:11px 0;border-bottom:1px solid #f5f5f5;}
+.amt-prefix{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:16px;font-weight:600;color:#bbb;pointer-events:none;}
+.qa-amt{width:100%;font-size:36px;font-weight:700;padding:15px 16px 15px 66px;border:2px solid #e8e8e8;border-radius:16px;background:#fafafa;color:#1a1a1a;outline:none;font-family:'Inter',sans-serif;letter-spacing:-.5px;}
+.qa-amt:focus{border-color:#1a56db;background:#fff;box-shadow:0 0 0 3px rgba(26,86,219,.08);}
+.inp-field{width:100%;font-size:14px;padding:12px 14px;border:1.5px solid #e8e8e8;border-radius:13px;background:#fafafa;color:#1a1a1a;outline:none;margin-bottom:10px;font-family:'Inter',sans-serif;}
+.inp-field:focus{border-color:#1a56db;background:#fff;box-shadow:0 0 0 3px rgba(26,86,219,.08);}
+.add-big{width:100%;padding:16px;font-size:16px;font-weight:700;border-radius:16px;border:none;background:linear-gradient(135deg,#1a56db,#2563eb);color:#fff;cursor:pointer;font-family:'Inter',sans-serif;transition:opacity .15s,transform .1s;margin-top:6px;box-shadow:0 4px 14px rgba(26,86,219,.3);letter-spacing:.01em;}
+.add-big:disabled{background:#c8d5eb;cursor:not-allowed;box-shadow:none;}
+.add-big:active:not(:disabled){opacity:.88;transform:scale(.98);}
+.txn{display:flex;align-items:center;padding:12px 0;border-bottom:1px solid #f5f5f5;}
 .txn:last-child{border-bottom:none;}
-.txn-icon{width:40px;height:40px;border-radius:50%;background:#f0f4ff;display:flex;align-items:center;justify-content:center;font-size:19px;margin-right:12px;flex-shrink:0;}
+.txn-icon{width:42px;height:42px;border-radius:14px;background:#f0f4ff;display:flex;align-items:center;justify-content:center;font-size:20px;margin-right:12px;flex-shrink:0;}
 .txn-name{font-size:13px;font-weight:600;color:#1a1a1a;}
-.txn-meta{font-size:11px;color:#bbb;margin-top:2px;}
-.txn-del{font-size:11px;padding:4px 8px;border:1px solid #fca5a5;border-radius:8px;background:transparent;color:#ef4444;cursor:pointer;margin-left:8px;font-family:'Inter',sans-serif;flex-shrink:0;-webkit-tap-highlight-color:transparent;}
-.catbar{padding:12px 0;border-bottom:1px solid #f5f5f5;}
+.txn-meta{font-size:11px;color:#bbb;margin-top:2px;display:flex;align-items:center;gap:4px;flex-wrap:wrap;}
+.txn-del{font-size:11px;padding:5px 9px;border:1.5px solid #fca5a5;border-radius:9px;background:transparent;color:#ef4444;cursor:pointer;margin-left:8px;font-family:'Inter',sans-serif;flex-shrink:0;font-weight:600;}
+.catbar{padding:13px 0;border-bottom:1px solid #f5f5f5;}
 .catbar:last-child{border-bottom:none;}
 .catbar-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
-.catbar-name{font-size:13px;font-weight:600;color:#1a1a1a;}
-.catbar-nums{font-size:12px;color:#999;font-weight:500;}
+.catbar-name{font-size:13px;font-weight:600;color:#1a1a1a;display:flex;align-items:center;gap:7px;}
+.catbar-nums{font-size:12px;color:#999;font-weight:600;}
 .mtabs{display:flex;gap:6px;margin-bottom:14px;overflow-x:auto;padding-bottom:3px;-webkit-overflow-scrolling:touch;}
 .mtabs::-webkit-scrollbar{display:none;}
 .mtab{padding:7px 14px;font-size:12px;font-weight:600;border-radius:10px;border:1.5px solid #ddd;background:#fff;color:#888;cursor:pointer;white-space:nowrap;flex-shrink:0;font-family:'Inter',sans-serif;transition:all .15s;-webkit-tap-highlight-color:transparent;}
-.mtab.active{background:#1a56db;color:#fff;border-color:#1a56db;}
+.mtab.active{background:#1a56db;color:#fff;border-color:#1a56db;box-shadow:0 2px 8px rgba(26,86,219,.25);}
 .field-row{display:flex;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid #f5f5f5;}
 .field-row:last-of-type{border-bottom:none;}
 .field-label{flex:1;font-size:13px;color:#444;font-weight:500;}
-.field-inp{text-align:right;font-size:13px;padding:6px 10px;border:1.5px solid #e8e8e8;border-radius:10px;background:#fafafa;color:#1a1a1a;outline:none;font-family:'Inter',sans-serif;}
+.field-inp{text-align:right;font-size:13px;padding:7px 10px;border:1.5px solid #e8e8e8;border-radius:10px;background:#fafafa;color:#1a1a1a;outline:none;font-family:'Inter',sans-serif;}
 .field-inp:focus{border-color:#1a56db;background:#fff;}
 .balsec{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.bcard{background:#f8f8f5;border-radius:12px;padding:12px 14px;border:1px solid #eee;}
-.bcard-title{font-size:11px;font-weight:700;color:#888;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em;}
+.bcard{background:#f8f8f5;border-radius:14px;padding:13px 14px;border:1px solid #eeede8;}
+.bcard-title{font-size:11px;font-weight:700;color:#888;margin-bottom:9px;text-transform:uppercase;letter-spacing:.05em;display:flex;align-items:center;gap:5px;}
 .brow{display:flex;align-items:center;gap:6px;padding:3px 0;}
 .brow label{flex:1;font-size:12px;color:#999;}
 .binp{text-align:right;font-size:12px;padding:4px 7px;border:1.5px solid #e8e8e8;border-radius:8px;background:#fff;color:#1a1a1a;width:90px;outline:none;font-family:'Inter',sans-serif;}
 .binp:focus{border-color:#1a56db;}
-.income-row{display:flex;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid #f5f5f5;}
+.income-row{display:flex;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid #f5f5f5;}
 .income-row:last-of-type{border-bottom:none;}
-.cat-manage{display:flex;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid #f5f5f5;}
+.cat-manage{display:flex;align-items:center;gap:8px;padding:11px 0;border-bottom:1px solid #f5f5f5;}
 .cat-manage:last-child{border-bottom:none;}
-.logrow{display:grid;grid-template-columns:65px 1fr 1fr;gap:6px;padding:8px 0;border-bottom:1px solid #f5f5f5;font-size:12px;align-items:center;}
+.fd-item{display:flex;align-items:center;padding:11px 0;border-bottom:1px solid #f5f5f5;}
+.fd-item:last-child{border-bottom:none;}
+.logrow{display:grid;grid-template-columns:76px 1fr 1fr;gap:6px;padding:9px 0;border-bottom:1px solid #f5f5f5;font-size:12px;align-items:center;}
 .logrow:last-child{border-bottom:none;}
 .add-row{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px;padding-top:12px;border-top:1px solid #f5f5f5;}
 .add-row input,.add-row select{font-size:12px;padding:8px 10px;border:1.5px solid #e8e8e8;border-radius:10px;background:#fff;color:#1a1a1a;outline:none;font-family:'Inter',sans-serif;}
 .add-row input:focus{border-color:#1a56db;}
-.sm-btn{padding:8px 14px;font-size:12px;font-weight:600;border:1.5px solid #1a56db;border-radius:10px;background:#eff6ff;color:#1a56db;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;-webkit-tap-highlight-color:transparent;}
+.sm-btn{padding:9px 15px;font-size:12px;font-weight:700;border:2px solid #1a56db;border-radius:11px;background:#eff6ff;color:#1a56db;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;-webkit-tap-highlight-color:transparent;}
 .sm-btn:active{background:#dbeafe;}
-.del-btn{padding:4px 9px;border:1px solid #fca5a5;border-radius:8px;background:transparent;color:#ef4444;cursor:pointer;font-size:11px;font-family:'Inter',sans-serif;flex-shrink:0;}
-.alert-box{border-radius:12px;padding:12px 16px;font-size:13px;font-weight:600;margin-bottom:14px;display:none;line-height:1.4;}
+.del-btn{padding:5px 10px;border:1.5px solid #fca5a5;border-radius:9px;background:transparent;color:#ef4444;cursor:pointer;font-size:11px;font-family:'Inter',sans-serif;flex-shrink:0;font-weight:600;}
+.alert-box{border-radius:14px;padding:13px 16px;font-size:13px;font-weight:600;margin-bottom:14px;display:none;line-height:1.5;}
 .alert-warn{background:#fff8e1;color:#b45309;border:1.5px solid #fcd34d;}
 .alert-dngr{background:#fee2e2;color:#991b1b;border:1.5px solid #fca5a5;}
 .nwline{margin-top:12px;padding-top:12px;border-top:1px solid #f0f0f0;font-size:13px;color:#444;font-weight:500;}
-.empty{font-size:13px;color:#ccc;text-align:center;padding:28px 0;}
-.pill{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;}
-.pill-blue{background:#dbeafe;color:#1e40af;}
-.date-badge{display:inline-block;font-size:10px;font-weight:600;padding:2px 7px;border-radius:6px;background:#f0f0eb;color:#888;margin-right:4px;}
+.empty{font-size:13px;color:#ccc;text-align:center;padding:30px 0;}
+.date-badge{display:inline-flex;align-items:center;gap:3px;font-size:10px;font-weight:600;padding:2px 7px;border-radius:6px;background:#f0f4ff;color:#1a56db;margin-right:4px;}
+.savings-hero{background:linear-gradient(135deg,#0f4c81,#1a56db);border-radius:20px;padding:22px 20px;margin-bottom:14px;color:#fff;box-shadow:0 4px 20px rgba(15,76,129,.3);}
+.fd-badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;background:rgba(255,255,255,.2);color:#fff;margin-left:6px;}
 </style>
 </head>
 <body>
@@ -110,22 +113,28 @@ html,body{font-family:'Inter',sans-serif;background:#f0f0eb;color:#1a1a1a;font-s
 </div>
 
 <div class="topnav">
-  <button class="tnbtn active" id="nav-spend" onclick="goPage('spend')">⚡ Quick Add</button>
-  <button class="tnbtn" id="nav-budget" onclick="goPage('budget')">📊 Budget</button>
-  <button class="tnbtn" id="nav-plan" onclick="goPage('plan')">📅 Planner</button>
+  <button class="tnbtn active" id="nav-spend" onclick="goPage('spend')">
+    <span class="tnbtn-icon">⚡</span>Quick Add
+  </button>
+  <button class="tnbtn" id="nav-budget" onclick="goPage('budget')">
+    <span class="tnbtn-icon">📊</span>Budget
+  </button>
+  <button class="tnbtn" id="nav-plan" onclick="goPage('plan')">
+    <span class="tnbtn-icon">📅</span>Planner
+  </button>
 </div>
 
-<!-- QUICK ADD -->
+<!-- ══ QUICK ADD ══ -->
 <div class="pg show" id="pg-spend">
   <div style="height:4px;"></div>
   <div id="sp-warn" class="alert-box alert-warn"></div>
   <div id="sp-dngr" class="alert-box alert-dngr"></div>
   <div class="hero">
-    <div class="hero-label" id="sp-month-lbl"></div>
+    <div class="hero-label"><span>📅</span><span id="sp-month-lbl"></span></div>
     <div class="hero-amount" id="sp-big">LKR 0</div>
     <div class="hero-sub" id="sp-sub"></div>
-    <div style="height:10px;border-radius:6px;background:rgba(255,255,255,.25);overflow:hidden;margin:12px 0 6px;">
-      <div id="sp-bar" style="height:100%;border-radius:6px;background:#fff;transition:width .35s;"></div>
+    <div style="height:10px;border-radius:6px;background:rgba(255,255,255,.25);overflow:hidden;margin:14px 0 6px;">
+      <div id="sp-bar" style="height:100%;border-radius:6px;background:#fff;transition:width .4s;"></div>
     </div>
     <div style="display:flex;justify-content:space-between;font-size:11px;opacity:.75;">
       <span id="sp-slbl"></span><span id="sp-llbl"></span>
@@ -134,42 +143,53 @@ html,body{font-family:'Inter',sans-serif;background:#f0f0eb;color:#1a1a1a;font-s
   <div class="card">
     <p class="stitle">Pick category</p>
     <div class="cat-grid" id="catGrid"></div>
-    <p class="stitle">Amount</p>
+    <p class="stitle">Amount (LKR)</p>
     <div class="amt-wrap">
       <span class="amt-prefix">LKR</span>
       <input type="number" class="qa-amt" id="qa-amt" placeholder="0" min="1" inputmode="numeric" oninput="checkBtn()">
     </div>
-    <p class="stitle" style="margin-top:4px;">Date</p>
-    <input type="date" class="qa-inp" id="qa-date">
+    <p class="stitle" style="margin-top:2px;">Date</p>
+    <input type="date" class="inp-field" id="qa-date" onchange="onDateChange()">
     <p class="stitle">Note <span style="font-weight:400;text-transform:none;letter-spacing:0;color:#ccc;">optional</span></p>
-    <input type="text" class="qa-inp" id="qa-note" placeholder="e.g. KFC, Uber, pharmacy…">
-    <button class="add-big" id="add-btn" onclick="qaAdd()" disabled>Add expense</button>
+    <input type="text" class="inp-field" id="qa-note" placeholder="e.g. KFC, Uber, pharmacy">
+    <button class="add-big" id="add-btn" onclick="qaAdd()" disabled>Add Expense</button>
   </div>
   <div class="card">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-      <p class="stitle" style="margin:0;">Transactions — <span id="sp-month-txn" style="text-transform:none;letter-spacing:0;font-weight:600;color:#555;"></span></p>
+      <p class="stitle" style="margin:0;">Transactions - <span id="sp-month-txn" style="text-transform:none;letter-spacing:0;font-weight:700;color:#1a56db;"></span></p>
       <span id="txn-count" style="font-size:11px;color:#bbb;font-weight:500;"></span>
     </div>
     <div id="txn-list"></div>
   </div>
 </div>
 
-<!-- BUDGET -->
+<!-- ══ BUDGET ══ -->
 <div class="pg" id="pg-budget">
   <div style="height:4px;"></div>
   <div class="smgrid" id="bdg-summary"></div>
   <div class="card">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
-      <p class="stitle" style="margin:0;">Monthly limit — LKR 100,000</p>
-      <span id="bdg-pct" style="font-size:12px;color:#aaa;font-weight:700;"></span>
+      <p class="stitle" style="margin:0;">Monthly limit - LKR 100,000</p>
+      <span id="bdg-pct" style="font-size:13px;color:#aaa;font-weight:700;"></span>
     </div>
     <div class="pbg"><div class="pf" id="bdg-bar"></div></div>
     <div class="blrow"><span id="bdg-slbl"></span><span id="bdg-llbl"></span></div>
   </div>
+
+  <!-- Categories + add new category here -->
   <div class="card">
-    <p class="stitle">By category — <span id="bdg-month" style="text-transform:none;letter-spacing:0;font-weight:600;color:#555;"></span></p>
+    <p class="stitle">By category - <span id="bdg-month" style="text-transform:none;letter-spacing:0;font-weight:700;color:#1a56db;"></span></p>
     <div id="bdg-cats"></div>
+    <div style="margin-top:14px;padding-top:14px;border-top:1.5px dashed #eee;">
+      <p class="stitle" style="margin-bottom:10px;">+ New category</p>
+      <div style="display:flex;gap:7px;flex-wrap:wrap;">
+        <input type="text" id="new-icon" placeholder="Emoji" style="width:58px;font-size:13px;padding:9px 10px;border:1.5px solid #e8e8e8;border-radius:11px;background:#fff;color:#1a1a1a;outline:none;font-family:'Inter',sans-serif;" maxlength="4">
+        <input type="text" id="new-name" placeholder="Category name" style="flex:1;min-width:90px;font-size:13px;padding:9px 10px;border:1.5px solid #e8e8e8;border-radius:11px;background:#fff;color:#1a1a1a;outline:none;font-family:'Inter',sans-serif;">
+        <button class="sm-btn" onclick="addCat()">+ Add</button>
+      </div>
+    </div>
   </div>
+
   <div class="card">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
       <p class="stitle" style="margin:0;">All transactions</p>
@@ -179,79 +199,105 @@ html,body{font-family:'Inter',sans-serif;background:#f0f0eb;color:#1a1a1a;font-s
   </div>
 </div>
 
-<!-- PLANNER -->
+<!-- ══ PLANNER ══ -->
 <div class="pg" id="pg-plan">
   <div style="height:4px;"></div>
   <div class="mtabs" id="monthTabs"></div>
   <div class="smgrid" id="plan-summary"></div>
-  <div class="card">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
-      <p class="stitle" style="margin:0;">Vehicle goal <span class="pill pill-blue" id="plan-gpct-pill"></span></p>
+
+  <!-- Total Savings card -->
+  <div class="savings-hero">
+    <div style="font-size:12px;opacity:.7;margin-bottom:6px;">💰 Total savings (net worth)</div>
+    <div style="font-size:36px;font-weight:700;letter-spacing:-.8px;margin-bottom:4px;" id="plan-networth"></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:14px;">
+      <div style="background:rgba(255,255,255,.15);border-radius:12px;padding:10px;">
+        <div style="font-size:10px;opacity:.65;margin-bottom:3px;font-weight:600;">LKR + FDs</div>
+        <div style="font-size:13px;font-weight:700;" id="plan-lkr-total"></div>
+      </div>
+      <div style="background:rgba(255,255,255,.15);border-radius:12px;padding:10px;">
+        <div style="font-size:10px;opacity:.65;margin-bottom:3px;font-weight:600;">AUD + FDs</div>
+        <div style="font-size:13px;font-weight:700;" id="plan-aud-total"></div>
+      </div>
+      <div style="background:rgba(255,255,255,.15);border-radius:12px;padding:10px;">
+        <div style="font-size:10px;opacity:.65;margin-bottom:3px;font-weight:600;">SAVED SO FAR</div>
+        <div style="font-size:13px;font-weight:700;" id="plan-accumulated"></div>
+      </div>
     </div>
-    <div class="pbg"><div class="pf" id="plan-gbar"></div></div>
-    <div class="blrow"><span id="plan-gleft"></span><span>Target: LKR 65,00,000</span></div>
   </div>
+
+  <!-- Income -->
   <div class="card">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
-      <p class="stitle" style="margin:0;">Income — <span id="plan-month-lbl" style="text-transform:none;letter-spacing:0;font-weight:700;color:#1a56db;"></span></p>
-      <span id="plan-inc-total" style="font-size:13px;font-weight:700;color:#0e7d4f;"></span>
+      <p class="stitle" style="margin:0;">💵 Income - <span id="plan-month-lbl" style="text-transform:none;letter-spacing:0;font-weight:700;color:#1a56db;"></span></p>
+      <span id="plan-inc-total" style="font-size:14px;font-weight:700;color:#0e7d4f;"></span>
     </div>
     <div id="income-rows"></div>
     <div class="add-row">
-      <input type="text" id="inc-name" placeholder="Income name" style="flex:1;min-width:100px;">
-      <input type="number" id="inc-amt" placeholder="Amount" style="width:100px;">
-      <select id="inc-cur" style="width:72px;">
+      <input type="text" id="inc-name" placeholder="Income name" style="flex:1;min-width:90px;">
+      <input type="number" id="inc-amt" placeholder="Amount" style="width:95px;">
+      <select id="inc-cur" style="width:70px;">
         <option value="LKR">LKR</option>
         <option value="AUD">AUD</option>
       </select>
       <button class="sm-btn" onclick="addIncome()">+ Add</button>
     </div>
-    <div id="incNote" style="font-size:11px;color:#aaa;margin-top:10px;padding-top:10px;border-top:1px solid #f5f5f5;line-height:1.6;"></div>
+    <div id="incNote" style="font-size:11px;color:#aaa;margin-top:10px;padding-top:10px;border-top:1px solid #f5f5f5;line-height:1.7;"></div>
   </div>
+
+  <!-- AUD Rate -->
   <div class="card">
-    <p class="stitle">AUD → LKR rate — <span id="rate-month-lbl" style="text-transform:none;letter-spacing:0;font-weight:600;color:#555;"></span></p>
+    <p class="stitle">💱 AUD rate - <span id="rate-month-lbl" style="text-transform:none;letter-spacing:0;font-weight:700;color:#1a56db;"></span></p>
     <div class="field-row" style="border-bottom:none;">
       <span class="field-label">1 AUD equals</span>
-      <div style="display:flex;align-items:center;gap:6px;">
+      <div style="display:flex;align-items:center;gap:8px;">
         <input type="number" class="field-inp" id="audRate" style="width:100px;" onchange="saveRate()">
-        <span style="font-size:13px;color:#aaa;font-weight:500;">LKR</span>
+        <span style="font-size:13px;color:#888;font-weight:600;">LKR</span>
       </div>
     </div>
-    <div id="rateNote" style="font-size:11px;color:#aaa;margin-top:8px;"></div>
+    <div id="rateNote" style="font-size:12px;color:#0e7d4f;margin-top:8px;font-weight:500;"></div>
   </div>
+
+  <!-- Balances (bank accounts only, not FDs) -->
   <div class="card">
-    <p class="stitle">Balances</p>
+    <p class="stitle">🏦 Bank balances</p>
     <div class="balsec">
       <div class="bcard">
-        <div class="bcard-title">LKR</div>
-        <div class="brow"><label>Fixed deposits</label><input type="number" class="binp" id="lkrFD" value="2500000" onchange="recalc()"></div>
+        <div class="bcard-title">🇱🇰 LKR</div>
         <div class="brow"><label>Bank balance</label><input type="number" class="binp" id="lkrBank" value="151179" onchange="recalc()"></div>
-        <div id="lkrTot" style="font-size:11px;color:#aaa;margin-top:6px;font-weight:500;"></div>
+        <div id="lkrTot" style="font-size:11px;color:#0e7d4f;margin-top:7px;font-weight:600;"></div>
       </div>
       <div class="bcard">
-        <div class="bcard-title">AUD</div>
-        <div class="brow"><label>Fixed deposit</label><input type="number" class="binp" id="audFD" value="1000" onchange="recalc()"></div>
+        <div class="bcard-title">🇦🇺 AUD</div>
         <div class="brow"><label>Bank balance</label><input type="number" class="binp" id="audBank" value="493.47" step="0.01" onchange="recalc()"></div>
-        <div id="audTot" style="font-size:11px;color:#aaa;margin-top:6px;font-weight:500;"></div>
+        <div id="audTot" style="font-size:11px;color:#0e7d4f;margin-top:7px;font-weight:600;"></div>
       </div>
     </div>
-    <div class="nwline" id="netWorth"></div>
   </div>
+
+  <!-- Fixed Deposits -->
   <div class="card">
-    <p class="stitle">Categories</p>
-    <div id="plan-cats"></div>
+    <p class="stitle">🏛️ Fixed deposits</p>
+    <div id="fd-list"></div>
     <div class="add-row">
-      <input type="text" id="new-icon" placeholder="Emoji" style="width:56px;" maxlength="4">
-      <input type="text" id="new-name" placeholder="Category name" style="flex:1;min-width:90px;">
-      <button class="sm-btn" onclick="addCat()">+ Add</button>
+      <select id="fd-cur" style="width:70px;">
+        <option value="LKR">LKR</option>
+        <option value="AUD">AUD</option>
+      </select>
+      <input type="number" id="fd-amt" placeholder="Amount" style="width:110px;">
+      <input type="date" id="fd-date" style="flex:1;min-width:100px;">
+      <input type="text" id="fd-note" placeholder="Label e.g. NSB" style="flex:1;min-width:80px;">
+      <button class="sm-btn" onclick="addFD()">+ Add</button>
     </div>
+    <div id="fd-summary" style="margin-top:10px;padding-top:10px;border-top:1px solid #f5f5f5;font-size:12px;color:#555;font-weight:500;line-height:1.7;"></div>
   </div>
+
+  <!-- Savings log -->
   <div class="card">
-    <p class="stitle">Month-by-month log</p>
-    <div style="display:grid;grid-template-columns:65px 1fr 1fr;gap:6px;padding:6px 0;border-bottom:1px solid #f5f5f5;">
-      <span style="font-size:10px;font-weight:700;color:#bbb;">MONTH</span>
-      <span style="font-size:10px;font-weight:700;color:#bbb;">SAVED</span>
-      <span style="font-size:10px;font-weight:700;color:#bbb;">BALANCE</span>
+    <p class="stitle">📈 Savings log</p>
+    <div style="display:grid;grid-template-columns:76px 1fr 1fr;gap:6px;padding:6px 0 10px;border-bottom:2px solid #f0f0f0;margin-bottom:2px;">
+      <span style="font-size:10px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.06em;">Month</span>
+      <span style="font-size:10px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.06em;">Saved</span>
+      <span style="font-size:10px;font-weight:700;color:#bbb;text-transform:uppercase;letter-spacing:.06em;">Net worth</span>
     </div>
     <div id="plan-log"></div>
   </div>
@@ -259,8 +305,30 @@ html,body{font-family:'Inter',sans-serif;background:#f0f0eb;color:#1a1a1a;font-s
 
 </div>
 <script>
-const MONTHS=['June','July','August','September','October','November','December'];
-const VT=6500000,BUDGET=100000,WARN=95000;
+const MONTHS=[
+  'Jun 2026','Jul 2026','Aug 2026','Sep 2026','Oct 2026','Nov 2026','Dec 2026',
+  'Jan 2027','Feb 2027','Mar 2027','Apr 2027','May 2027','Jun 2027',
+  'Jul 2027','Aug 2027','Sep 2027','Oct 2027','Nov 2027','Dec 2027'
+];
+
+const MONTH_DATES={
+  'Jun 2026':{y:2026,m:6},'Jul 2026':{y:2026,m:7},'Aug 2026':{y:2026,m:8},
+  'Sep 2026':{y:2026,m:9},'Oct 2026':{y:2026,m:10},'Nov 2026':{y:2026,m:11},
+  'Dec 2026':{y:2026,m:12},'Jan 2027':{y:2027,m:1},'Feb 2027':{y:2027,m:2},
+  'Mar 2027':{y:2027,m:3},'Apr 2027':{y:2027,m:4},'May 2027':{y:2027,m:5},
+  'Jun 2027':{y:2027,m:6},'Jul 2027':{y:2027,m:7},'Aug 2027':{y:2027,m:8},
+  'Sep 2027':{y:2027,m:9},'Oct 2027':{y:2027,m:10},'Nov 2027':{y:2027,m:11},
+  'Dec 2027':{y:2027,m:12}
+};
+
+function monthFromDate(dateStr){
+  if(!dateStr) return S.am;
+  const[y,m]=dateStr.split('-').map(Number);
+  return MONTHS.find(mo=>MONTH_DATES[mo]&&MONTH_DATES[mo].y===y&&MONTH_DATES[mo].m===m)||S.am;
+}
+
+const VT=6500000, BUDGET=100000, WARN=95000;
+// Net worth is calculated entirely from what you enter — no hardcoded starting value
 
 let CATS=[
   {key:'bills',    icon:'📋',label:'Bills',     custom:false},
@@ -269,6 +337,7 @@ let CATS=[
   {key:'transport',icon:'🚗', label:'Transport', custom:false},
   {key:'health',   icon:'💊', label:'Health',    custom:false},
   {key:'personal', icon:'🛍️',label:'Personal',  custom:false},
+  {key:'education',icon:'🎓', label:'Education', custom:false},
   {key:'other',    icon:'📦', label:'Other',     custom:false},
 ];
 
@@ -277,14 +346,21 @@ MONTHS.forEach(m=>{
   MDATA[m]={
     incomes:[
       {id:1,name:'LKR Salary',amount:183600,currency:'LKR'},
-      {id:2,name:'AUD Income',amount:1081,  currency:'AUD'},
+      {id:2,name:'AUD Income',amount:1081,currency:'AUD'},
     ],
     audRate:230,
     nextIncId:10
   };
 });
 
-let S={am:'June',sc:'bills',lkrFD:2500000,lkrBank:151179,audFD:1000,audBank:493.47,txns:{},ntid:1,ncatid:100};
+// Fixed deposits log: [{id, currency, amount, date, note}]
+let FDS=[];
+
+let S={
+  am:'Jun 2026',sc:'bills',
+  lkrBank:151179, audBank:493.47,
+  txns:{}, ntid:1, ncatid:100, nfdid:1
+};
 MONTHS.forEach(m=>{S.txns[m]=[];});
 
 const R=n=>Math.round(n);
@@ -293,41 +369,64 @@ const F=n=>'LKR '+FN(n);
 
 function toAmt(amount,currency,m){
   if(currency==='LKR') return amount;
-  if(currency==='AUD') return amount*(MDATA[m].audRate||230);
-  return amount;
+  return amount*(MDATA[m]?.audRate||230);
 }
-function totalInc(m){return MDATA[m].incomes.reduce((s,i)=>s+toAmt(i.amount,i.currency,m),0);}
+function totalInc(m){return(MDATA[m]?.incomes||[]).reduce((s,i)=>s+toAmt(i.amount,i.currency,m),0);}
 const mTxns=m=>S.txns[m]||[];
 const txnTot=m=>mTxns(m).reduce((s,t)=>s+t.amt,0);
 const catSpent=(m,k)=>mTxns(m).filter(t=>t.cat===k).reduce((s,t)=>s+t.amt,0);
 const mSave=m=>totalInc(m)-txnTot(m);
-const lkrNet=()=>S.lkrFD+S.lkrBank;
-const audNet=()=>S.audFD+S.audBank;
-const nwLKR=()=>lkrNet()+audNet()*(MDATA[S.am].audRate||230);
-function openingBal(m){let b=lkrNet();for(let i=0;i<MONTHS.indexOf(m);i++)b+=mSave(MONTHS[i]);return b;}
-function closingBal(m){return openingBal(m)+mSave(m);}
-const todayISO=()=>new Date().toISOString().split('T')[0];
-function fmtShort(d){try{return new Date(d+'T00:00:00').toLocaleDateString('en-GB',{day:'numeric',month:'short'});}catch(e){return d;}}
 
-// ── SAVE / LOAD from localStorage ──
+// FD totals in LKR
+function fdTotalLKR(){
+  const rate=MDATA[S.am]?.audRate||230;
+  return FDS.reduce((s,f)=>s+(f.currency==='LKR'?f.amount:f.amount*rate),0);
+}
+function fdTotalByType(cur){return FDS.filter(f=>f.currency===cur).reduce((s,f)=>s+f.amount,0);}
+
+// Net worth = starting NW + all accumulated savings so far + current bank balances delta
+// Simpler: starting NW + sum of savings for months that have passed
+function accumulatedSavings(upToMonth){
+  let total=0;
+  for(let i=0;i<=MONTHS.indexOf(upToMonth);i++) total+=mSave(MONTHS[i]);
+  return total;
+}
+
+function netWorthAt(m){
+  // Bank balances + all FDs + monthly savings accumulated from Jun 2026
+  const rate=MDATA[m]?.audRate||230;
+  const bankLKR=S.lkrBank;
+  const bankAUD=S.audBank*rate;
+  const fds=fdTotalLKR();
+  const accumulated=accumulatedSavings(m);
+  return bankLKR+bankAUD+fds+accumulated;
+}
+
+const todayISO=()=>new Date().toISOString().split('T')[0];
+function fmtShort(d){try{return new Date(d+'T00:00:00').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'2-digit'});}catch(e){return d;}}
+
 function saveData(){
   try{
-    localStorage.setItem('sappy_cats',JSON.stringify(CATS));
-    localStorage.setItem('sappy_mdata',JSON.stringify(MDATA));
-    localStorage.setItem('sappy_s',JSON.stringify({
-      am:S.am,sc:S.sc,lkrFD:S.lkrFD,lkrBank:S.lkrBank,
-      audFD:S.audFD,audBank:S.audBank,txns:S.txns,ntid:S.ntid,ncatid:S.ncatid
+    localStorage.setItem('sb_cats',JSON.stringify(CATS));
+    localStorage.setItem('sb_mdata',JSON.stringify(MDATA));
+    localStorage.setItem('sb_fds',JSON.stringify(FDS));
+    localStorage.setItem('sb_s',JSON.stringify({
+      am:S.am,sc:S.sc,lkrBank:S.lkrBank,audBank:S.audBank,
+      txns:S.txns,ntid:S.ntid,ncatid:S.ncatid,nfdid:S.nfdid
     }));
   }catch(e){}
 }
 function loadData(){
   try{
-    const cats=localStorage.getItem('sappy_cats');
-    if(cats) CATS=JSON.parse(cats);
-    const md=localStorage.getItem('sappy_mdata');
-    if(md) MDATA=JSON.parse(md);
-    const ss=localStorage.getItem('sappy_s');
+    const c=localStorage.getItem('sb_cats'); if(c) CATS=JSON.parse(c);
+    const md=localStorage.getItem('sb_mdata'); if(md) MDATA=JSON.parse(md);
+    const fd=localStorage.getItem('sb_fds'); if(fd) FDS=JSON.parse(fd);
+    const ss=localStorage.getItem('sb_s');
     if(ss){const d=JSON.parse(ss);Object.assign(S,d);}
+    MONTHS.forEach(m=>{
+      if(!S.txns[m]) S.txns[m]=[];
+      if(!MDATA[m]) MDATA[m]={incomes:[{id:1,name:'LKR Salary',amount:183600,currency:'LKR'},{id:2,name:'AUD Income',amount:1081,currency:'AUD'}],audRate:230,nextIncId:10};
+    });
   }catch(e){}
 }
 
@@ -341,22 +440,30 @@ function goPage(p){
   if(p==='plan')   renderPlan();
 }
 
+function onDateChange(){
+  const d=document.getElementById('qa-date').value;
+  const mo=monthFromDate(d);
+  S.am=mo; saveData();
+  renderSpend();
+}
 function checkBtn(){document.getElementById('add-btn').disabled=!(parseFloat(document.getElementById('qa-amt').value)>0);}
 
 function qaAdd(){
   const amt=parseFloat(document.getElementById('qa-amt').value);
   if(!amt||amt<=0) return;
-  const note=document.getElementById('qa-note').value.trim()||CATS.find(c=>c.key===S.sc)?.label||S.sc;
   const date=document.getElementById('qa-date').value||todayISO();
+  const targetMonth=monthFromDate(date);
+  const note=document.getElementById('qa-note').value.trim()||CATS.find(c=>c.key===S.sc)?.label||S.sc;
   const time=new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
-  S.txns[S.am].unshift({id:S.ntid++,cat:S.sc,amt:R(amt),note,date,time});
+  if(!S.txns[targetMonth]) S.txns[targetMonth]=[];
+  S.txns[targetMonth].unshift({id:S.ntid++,cat:S.sc,amt:R(amt),note,date,time});
+  S.am=targetMonth;
   document.getElementById('qa-amt').value='';
   document.getElementById('qa-note').value='';
   document.getElementById('qa-date').value=todayISO();
   document.getElementById('add-btn').disabled=true;
   document.getElementById('qa-amt').focus();
-  saveData();
-  renderSpend();
+  saveData(); renderSpend();
 }
 
 function delTxn(id){
@@ -369,28 +476,46 @@ function delTxn(id){
 
 function selCat(k){S.sc=k;renderSpend();}
 
+function addFD(){
+  const cur=document.getElementById('fd-cur').value;
+  const amt=parseFloat(document.getElementById('fd-amt').value);
+  const date=document.getElementById('fd-date').value||todayISO();
+  const note=document.getElementById('fd-note').value.trim()||'Fixed deposit';
+  if(!amt||isNaN(amt)) return;
+  FDS.push({id:S.nfdid++,currency:cur,amount:amt,date,note});
+  document.getElementById('fd-amt').value='';
+  document.getElementById('fd-note').value='';
+  document.getElementById('fd-date').value=todayISO();
+  saveData(); renderPlan();
+}
+
+function delFD(id){
+  FDS=FDS.filter(f=>f.id!==id);
+  saveData(); renderPlan();
+}
+
 function renderTxnItem(t){
   const c=CATS.find(x=>x.key===t.cat)||{icon:'📦',label:t.cat};
   return`<div class="txn">
     <div class="txn-icon">${c.icon}</div>
     <div style="flex:1;">
       <div class="txn-name">${t.note}</div>
-      <div class="txn-meta"><span class="date-badge">📅 ${fmtShort(t.date)}</span>${t.time} · ${c.label}</div>
+      <div class="txn-meta"><span class="date-badge">📅 ${fmtShort(t.date)}</span>${t.time} - ${c.label}</div>
     </div>
-    <span style="font-size:15px;font-weight:700;color:#c0392b;margin-right:6px;">−${FN(t.amt)}</span>
+    <span style="font-size:15px;font-weight:700;color:#c0392b;margin-right:8px;">-${FN(t.amt)}</span>
     <button class="txn-del" onclick="delTxn(${t.id})">✕</button>
   </div>`;
 }
 
 function renderSpend(){
-  const m=S.am,spent=txnTot(m),left=Math.max(0,BUDGET-spent);
+  const m=S.am, spent=txnTot(m), left=Math.max(0,BUDGET-spent);
   const pct=Math.min(100,R(spent/BUDGET*100));
-  const wEl=document.getElementById('sp-warn'),dEl=document.getElementById('sp-dngr');
+  const wEl=document.getElementById('sp-warn'), dEl=document.getElementById('sp-dngr');
   wEl.style.display=spent>=WARN&&spent<BUDGET?'block':'none';
   dEl.style.display=spent>=BUDGET?'block':'none';
-  if(spent>=WARN&&spent<BUDGET) wEl.textContent='⚠️ Almost there — only '+F(left)+' left this month!';
-  if(spent>=BUDGET) dEl.textContent='🚫 Monthly limit reached! You\'ve hit LKR 100,000.';
-  document.getElementById('sp-month-lbl').textContent=m+' variable spending';
+  if(spent>=WARN&&spent<BUDGET) wEl.innerHTML='⚠️ <strong>Almost there!</strong> Only '+F(left)+' left this month.';
+  if(spent>=BUDGET) dEl.innerHTML='🚫 <strong>Monthly limit reached!</strong> You\'ve hit LKR 100,000.';
+  document.getElementById('sp-month-lbl').textContent=m+' spending';
   document.getElementById('sp-big').textContent=F(spent);
   document.getElementById('sp-sub').textContent=pct+'% of LKR 100,000 monthly limit';
   document.getElementById('sp-bar').style.width=pct+'%';
@@ -405,97 +530,139 @@ function renderSpend(){
   const all=mTxns(m);
   document.getElementById('txn-count').textContent=all.length?all.length+' transaction'+(all.length>1?'s':''):'';
   document.getElementById('sp-month-txn').textContent=m;
-  document.getElementById('txn-list').innerHTML=all.length===0?'<div class="empty">No expenses added yet</div>':all.map(renderTxnItem).join('');
+  document.getElementById('txn-list').innerHTML=all.length===0?'<div class="empty">📭 No expenses in '+m+'</div>':all.map(renderTxnItem).join('');
 }
 
 function renderBudget(){
-  const m=S.am,spent=txnTot(m),saved=mSave(m),left=Math.max(0,BUDGET-spent);
+  const m=S.am, spent=txnTot(m), saved=mSave(m), left=Math.max(0,BUDGET-spent);
   const pct=Math.min(100,R(spent/BUDGET*100));
   const bc=spent>=BUDGET?'#dc2626':spent>=WARN?'#d97706':'#0e7d4f';
   document.getElementById('bdg-summary').innerHTML=`
-    <div class="sm"><div class="sml">Total spent</div><div class="smv ${spent>=WARN?'c-warn':'c-dark'}">${FN(spent)}</div></div>
-    <div class="sm"><div class="sml">Remaining</div><div class="smv ${left===0?'c-red':left<10000?'c-warn':'c-green'}">${FN(left)}</div></div>
-    <div class="sm"><div class="sml">Income (${m})</div><div class="smv c-blue">${FN(totalInc(m))}</div></div>
-    <div class="sm"><div class="sml">Saved (${m})</div><div class="smv ${saved>=0?'c-green':'c-red'}">${FN(saved)}</div></div>
+    <div class="sm"><div class="sml">💸 Total spent</div><div class="smv ${spent>=WARN?'c-warn':'c-dark'}">${FN(spent)}</div></div>
+    <div class="sm"><div class="sml">💚 Remaining</div><div class="smv ${left===0?'c-red':left<10000?'c-warn':'c-green'}">${FN(left)}</div></div>
+    <div class="sm"><div class="sml">💵 Income</div><div class="smv c-blue">${FN(totalInc(m))}</div></div>
+    <div class="sm"><div class="sml">🏦 Saved</div><div class="smv ${saved>=0?'c-green':'c-red'}">${FN(saved)}</div></div>
   `;
   document.getElementById('bdg-bar').style.cssText=`width:${pct}%;background:${bc};`;
   document.getElementById('bdg-pct').textContent=pct+'%';
   document.getElementById('bdg-slbl').textContent='Spent: '+F(spent);
   document.getElementById('bdg-llbl').textContent='Left: '+F(left);
   document.getElementById('bdg-month').textContent=m;
+
   document.getElementById('bdg-cats').innerHTML=CATS.map(c=>{
     const cs=catSpent(m,c.key);
-    if(cs===0) return`<div class="catbar" style="opacity:.35;"><div class="catbar-head"><span class="catbar-name">${c.icon} ${c.label}</span><span class="catbar-nums">LKR 0</span></div></div>`;
+    if(cs===0) return`<div class="catbar" style="opacity:.3;">
+      <div class="catbar-head"><span class="catbar-name">${c.icon} ${c.label}</span><span class="catbar-nums">LKR 0</span></div>
+      <button class="del-btn" style="margin-top:4px;${c.custom?'':'display:none;'}" onclick="delCat('${c.key}')">Remove</button>
+    </div>`;
     const cpct=Math.min(100,R(cs/BUDGET*100));
     const barC=cpct>40?'#dc2626':cpct>20?'#d97706':'#1a56db';
     return`<div class="catbar">
-      <div class="catbar-head"><span class="catbar-name">${c.icon} ${c.label}</span><span class="catbar-nums" style="color:#555;font-weight:700;">LKR ${FN(cs)}</span></div>
-      <div class="pbg-sm" style="margin:0 0 4px;"><div class="pf" style="width:${cpct}%;background:${barC};border-radius:4px;"></div></div>
+      <div class="catbar-head">
+        <span class="catbar-name">${c.icon} ${c.label}</span>
+        <div style="display:flex;align-items:center;gap:8px;">
+          <span class="catbar-nums" style="color:#333;font-weight:700;">LKR ${FN(cs)}</span>
+          ${c.custom?`<button class="del-btn" onclick="delCat('${c.key}')">✕</button>`:''}
+        </div>
+      </div>
+      <div class="pbg-sm" style="margin:0 0 5px;"><div class="pf" style="width:${cpct}%;background:${barC};border-radius:4px;"></div></div>
       <span style="font-size:11px;color:#aaa;font-weight:500;">${cpct}% of monthly limit</span>
     </div>`;
   }).join('');
+
   const all=mTxns(m);
   document.getElementById('bdg-txn-count').textContent=all.length?all.length+' total':'';
-  document.getElementById('bdg-txns').innerHTML=all.length===0?'<div class="empty">No transactions this month</div>':all.map(renderTxnItem).join('');
+  document.getElementById('bdg-txns').innerHTML=all.length===0?'<div class="empty">📭 No transactions in '+m+'</div>':all.map(renderTxnItem).join('');
 }
 
 function renderPlan(){
-  const m=S.am,spent=txnTot(m),saved=mSave(m),closing=closingBal(m);
-  const gpct=Math.min(100,R(closing/VT*100)),needed=Math.max(0,VT-closing);
-  const gc=gpct>=100?'#0e7d4f':gpct>60?'#d97706':'#dc2626';
+  const m=S.am, spent=txnTot(m), saved=mSave(m);
+  const rate=MDATA[m]?.audRate||230;
+  const nw=netWorthAt(m);
+  const accumulated=accumulatedSavings(m);
+
   document.getElementById('monthTabs').innerHTML=MONTHS.map(mo=>`<button class="mtab${mo===m?' active':''}" onclick="setMonth('${mo}')">${mo}</button>`).join('');
+
   document.getElementById('plan-summary').innerHTML=`
-    <div class="sm"><div class="sml">Income (${m})</div><div class="smv c-blue">${FN(totalInc(m))}</div></div>
-    <div class="sm"><div class="sml">Spent (${m})</div><div class="smv c-warn">${FN(spent)}</div></div>
-    <div class="sm"><div class="sml">Saved (${m})</div><div class="smv ${saved>=0?'c-green':'c-red'}">${FN(saved)}</div></div>
-    <div class="sm"><div class="sml">Balance after ${m}</div><div class="smv c-purple">${FN(closing)}</div></div>
+    <div class="sm"><div class="sml">💵 Income</div><div class="smv c-blue">${FN(totalInc(m))}</div></div>
+    <div class="sm"><div class="sml">💸 Spent</div><div class="smv c-warn">${FN(spent)}</div></div>
+    <div class="sm"><div class="sml">💚 Saved this month</div><div class="smv ${saved>=0?'c-green':'c-red'}">${FN(saved)}</div></div>
+    <div class="sm"><div class="sml">📈 Total accumulated</div><div class="smv c-purple">${FN(accumulated)}</div></div>
   `;
-  document.getElementById('plan-gbar').style.cssText=`width:${gpct}%;background:${gc};`;
-  document.getElementById('plan-gpct-pill').textContent=gpct+'%';
-  document.getElementById('plan-gleft').textContent=needed>0?F(needed)+' to go':'🎉 Goal reached!';
+
+  // Savings hero
+  const fdLKRonly=fdTotalByType('LKR');
+  const fdAUDonly=fdTotalByType('AUD');
+  const rate2=MDATA[m]?.audRate||230;
+  document.getElementById('plan-networth').textContent=F(nw);
+  document.getElementById('plan-lkr-total').textContent=F(S.lkrBank+fdLKRonly);
+  document.getElementById('plan-aud-total').textContent='AUD '+(S.audBank+fdAUDonly).toFixed(2);
+  document.getElementById('plan-accumulated').textContent=F(accumulated>0?accumulated:0);
+
+  // Income
   document.getElementById('plan-month-lbl').textContent=m;
   document.getElementById('rate-month-lbl').textContent=m;
   document.getElementById('plan-inc-total').textContent='= '+F(totalInc(m));
   document.getElementById('audRate').value=MDATA[m].audRate;
-  document.getElementById('rateNote').textContent=`AUD 1,000 × ${MDATA[m].audRate} = LKR ${FN(1000*MDATA[m].audRate)} this month`;
-  document.getElementById('income-rows').innerHTML=MDATA[m].incomes.map(i=>`
+  document.getElementById('rateNote').textContent='AUD 1,000 x '+MDATA[m].audRate+' = LKR '+FN(1000*MDATA[m].audRate)+' this month';
+
+  document.getElementById('income-rows').innerHTML=(MDATA[m].incomes||[]).map(i=>`
     <div class="income-row">
       <div style="flex:1;">
         <div style="font-size:13px;font-weight:600;color:#333;">${i.name}</div>
-        <div style="font-size:11px;color:#aaa;margin-top:1px;">${i.currency}${i.currency==='AUD'?' × '+MDATA[m].audRate+' = LKR '+FN(toAmt(i.amount,i.currency,m)):''}</div>
+        <div style="font-size:11px;color:#aaa;margin-top:2px;">${i.currency==='AUD'?'AUD '+FN(i.amount)+' x '+MDATA[m].audRate+' = LKR '+FN(toAmt(i.amount,i.currency,m)):'LKR '+FN(i.amount)}</div>
       </div>
       <input type="number" class="field-inp" value="${i.amount}" style="width:110px;" onchange="updateIncome('${m}',${i.id},+this.value)">
       ${i.id>=10?`<button class="del-btn" style="margin-left:6px;" onclick="delIncome('${m}',${i.id})">✕</button>`:'<span style="width:28px;"></span>'}
     </div>`).join('');
-  const noteLines=MDATA[m].incomes.map(i=>`${i.name}: ${i.currency==='AUD'?'AUD '+FN(i.amount)+' = LKR '+FN(toAmt(i.amount,i.currency,m)):'LKR '+FN(i.amount)}`);
+
+  const noteLines=(MDATA[m].incomes||[]).map(i=>`${i.name}: ${i.currency==='AUD'?'AUD '+FN(i.amount)+' = LKR '+FN(toAmt(i.amount,i.currency,m)):'LKR '+FN(i.amount)}`);
   document.getElementById('incNote').innerHTML=noteLines.join('<br>');
-  document.getElementById('lkrTot').textContent='Total: '+F(lkrNet());
-  document.getElementById('audTot').textContent='AUD '+audNet().toFixed(2)+' = '+F(audNet()*MDATA[m].audRate);
-  document.getElementById('netWorth').innerHTML='Net worth: <strong style="color:#0e7d4f;font-size:15px;">'+F(nwLKR())+'</strong>';
-  document.getElementById('plan-cats').innerHTML=CATS.map(c=>{
-    const cs=catSpent(m,c.key);
-    return`<div class="cat-manage">
-      <div style="font-size:22px;width:36px;text-align:center;flex-shrink:0;">${c.icon}</div>
-      <div style="flex:1;padding:0 8px;">
-        <div style="font-size:13px;font-weight:600;color:#1a1a1a;">${c.label}</div>
-        <div style="font-size:11px;color:${cs>0?'#c0392b':'#bbb'};margin-top:2px;">${cs>0?'LKR '+FN(cs)+' spent this month':'No spending yet'}</div>
+
+  // Bank balances
+  document.getElementById('lkrBank').value=S.lkrBank;
+  document.getElementById('audBank').value=S.audBank;
+  document.getElementById('lkrTot').textContent='Bank: '+F(S.lkrBank);
+  document.getElementById('audTot').textContent='Bank: AUD '+parseFloat(S.audBank).toFixed(2);
+
+  // Fixed deposits
+  const fdLKR=fdTotalByType('LKR'), fdAUD=fdTotalByType('AUD');
+  document.getElementById('fd-list').innerHTML=FDS.length===0?'<div class="empty" style="padding:16px 0;">No fixed deposits logged yet</div>':FDS.map(f=>{
+    const lkrEq=f.currency==='AUD'?f.amount*rate:f.amount;
+    return`<div class="fd-item">
+      <div style="width:42px;height:42px;border-radius:14px;background:${f.currency==='AUD'?'#f0fdf4':'#eff6ff'};display:flex;align-items:center;justify-content:center;font-size:20px;margin-right:12px;flex-shrink:0;">${f.currency==='AUD'?'🇦🇺':'🇱🇰'}</div>
+      <div style="flex:1;">
+        <div style="font-size:13px;font-weight:600;color:#1a1a1a;">${f.note} <span style="font-size:11px;font-weight:500;color:#aaa;">(${f.currency})</span></div>
+        <div style="font-size:12px;color:#0e7d4f;font-weight:600;margin-top:2px;">${f.currency} ${FN(f.amount)}${f.currency==='AUD'?' = LKR '+FN(lkrEq):''}</div>
+        <div style="font-size:11px;color:#bbb;margin-top:1px;">Added ${fmtShort(f.date)}</div>
       </div>
-      ${c.custom?`<button class="del-btn" onclick="delCat('${c.key}')">✕</button>`:'<span style="width:28px;"></span>'}
+      <button class="del-btn" onclick="delFD(${f.id})">✕</button>
     </div>`;
   }).join('');
+
+  if(!document.getElementById('fd-date').value) document.getElementById('fd-date').value=todayISO();
+
+  document.getElementById('fd-summary').innerHTML=`
+    LKR fixed deposits: <strong style="color:#0e7d4f;">${F(fdLKR)}</strong><br>
+    AUD fixed deposits: <strong style="color:#0e7d4f;">AUD ${FN(fdAUD)} = LKR ${FN(fdAUD*rate)}</strong><br>
+    Total FDs in LKR: <strong style="color:#1a56db;">${F(fdTotalLKR())}</strong>
+  `;
+
+  // Savings log
   document.getElementById('plan-log').innerHTML=MONTHS.map(mo=>{
-    const s=mSave(mo),cb=closingBal(mo),ht=txnTot(mo)>0;
-    return`<div class="logrow">
-      <span style="font-weight:700;color:${mo===m?'#1a56db':'#444'};">${mo}${ht?' ●':''}</span>
-      <span style="color:${s>=0?'#0e7d4f':'#c0392b'};font-weight:600;">${s>=0?'+':''}${FN(s)}</span>
-      <span style="color:#7c3aed;font-weight:600;">${FN(cb)}</span>
+    const s=mSave(mo), nwAt=netWorthAt(mo), ht=txnTot(mo)>0;
+    const isActive=mo===m;
+    return`<div class="logrow" style="${isActive?'background:#f0f5ff;border-radius:10px;padding:9px 8px;margin:0 -8px;':''}">
+      <span style="font-weight:700;color:${isActive?'#1a56db':'#555'};font-size:12px;">${mo}${ht?' 🔵':''}</span>
+      <span style="color:${s>=0?'#0e7d4f':'#c0392b'};font-weight:700;">${s>=0?'+':'-'}${FN(Math.abs(s))}</span>
+      <span style="color:#7c3aed;font-weight:700;">${FN(nwAt)}</span>
     </div>`;
   }).join('');
 }
 
-function setMonth(m){S.am=m;renderPlan();}
+function setMonth(m){S.am=m;saveData();renderPlan();}
 function saveRate(){MDATA[S.am].audRate=parseFloat(document.getElementById('audRate').value)||230;saveData();renderPlan();}
-function updateIncome(m,id,v){const i=MDATA[m].incomes.find(x=>x.id===id);if(i){i.amount=v;saveData();renderPlan();}}
+function updateIncome(m,id,v){const i=(MDATA[m].incomes||[]).find(x=>x.id===id);if(i){i.amount=v;saveData();renderPlan();}}
 function delIncome(m,id){MDATA[m].incomes=MDATA[m].incomes.filter(i=>i.id!==id);saveData();renderPlan();}
 function addIncome(){
   const name=document.getElementById('inc-name').value.trim();
@@ -509,9 +676,7 @@ function addIncome(){
   saveData();renderPlan();
 }
 function recalc(){
-  S.lkrFD=parseFloat(document.getElementById('lkrFD').value)||0;
   S.lkrBank=parseFloat(document.getElementById('lkrBank').value)||0;
-  S.audFD=parseFloat(document.getElementById('audFD').value)||0;
   S.audBank=parseFloat(document.getElementById('audBank').value)||0;
   saveData();renderPlan();
 }
@@ -522,16 +687,17 @@ function addCat(){
   CATS.push({key:'cat_'+S.ncatid++,icon,label:name,custom:true});
   document.getElementById('new-icon').value='';
   document.getElementById('new-name').value='';
-  saveData();renderPlan();renderSpend();
+  saveData();renderBudget();renderSpend();
 }
 function delCat(key){
   CATS=CATS.filter(c=>c.key!==key);
   if(S.sc===key) S.sc=CATS[0]?.key||'bills';
-  saveData();renderPlan();renderSpend();
+  saveData();renderBudget();renderSpend();
 }
 
 document.getElementById('qa-amt').addEventListener('keydown',e=>{if(e.key==='Enter')qaAdd();});
 document.getElementById('qa-date').value=todayISO();
+document.getElementById('fd-date').value=todayISO();
 
 loadData();
 renderSpend();
