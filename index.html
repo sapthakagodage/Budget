@@ -169,11 +169,16 @@ html,body{font-family:'Inter',sans-serif;background:#f0f0eb;color:#1a1a1a;font-s
   <div class="smgrid" id="bdg-summary"></div>
   <div class="card">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
-      <p class="stitle" style="margin:0;">Monthly limit - LKR 100,000</p>
+      <p class="stitle" style="margin:0;">Monthly limit - <span id="bdg-limit-lbl"></span></p>
       <span id="bdg-pct" style="font-size:13px;color:#aaa;font-weight:700;"></span>
     </div>
     <div class="pbg"><div class="pf" id="bdg-bar"></div></div>
     <div class="blrow"><span id="bdg-slbl"></span><span id="bdg-llbl"></span></div>
+    <div style="display:flex;align-items:center;gap:8px;margin-top:12px;padding-top:12px;border-top:1px solid #f5f5f5;">
+      <span style="font-size:12px;color:#888;font-weight:500;flex:1;">Adjust monthly limit</span>
+      <input type="number" id="budget-inp" style="width:110px;text-align:right;font-size:13px;padding:6px 10px;border:1.5px solid #e8e8e8;border-radius:10px;background:#fafafa;color:#1a1a1a;outline:none;font-family:'Inter',sans-serif;" onchange="updateBudget(+this.value)">
+      <span style="font-size:12px;color:#888;font-weight:500;">LKR</span>
+    </div>
   </div>
 
   <!-- Categories + add new category here -->
@@ -327,7 +332,9 @@ function monthFromDate(dateStr){
   return MONTHS.find(mo=>MONTH_DATES[mo]&&MONTH_DATES[mo].y===y&&MONTH_DATES[mo].m===m)||S.am;
 }
 
-const VT=6500000, BUDGET=100000, WARN=95000;
+const VT=6500000;
+let BUDGET=100000;
+let WARN=95000;
 // Net worth is calculated entirely from what you enter — no hardcoded starting value
 
 let CATS=[
@@ -359,6 +366,7 @@ let FDS=[];
 let S={
   am:'Jun 2026',sc:'bills',
   lkrBank:151179, audBank:493.47,
+  budget:100000,
   txns:{}, ntid:1, ncatid:100, nfdid:1
 };
 MONTHS.forEach(m=>{S.txns[m]=[];});
@@ -411,7 +419,7 @@ function saveData(){
     localStorage.setItem('sb_mdata',JSON.stringify(MDATA));
     localStorage.setItem('sb_fds',JSON.stringify(FDS));
     localStorage.setItem('sb_s',JSON.stringify({
-      am:S.am,sc:S.sc,lkrBank:S.lkrBank,audBank:S.audBank,
+      am:S.am,sc:S.sc,lkrBank:S.lkrBank,audBank:S.audBank,budget:S.budget,
       txns:S.txns,ntid:S.ntid,ncatid:S.ncatid,nfdid:S.nfdid
     }));
   }catch(e){}
@@ -513,11 +521,11 @@ function renderSpend(){
   const wEl=document.getElementById('sp-warn'), dEl=document.getElementById('sp-dngr');
   wEl.style.display=spent>=WARN&&spent<BUDGET?'block':'none';
   dEl.style.display=spent>=BUDGET?'block':'none';
-  if(spent>=WARN&&spent<BUDGET) wEl.innerHTML='⚠️ <strong>Almost there!</strong> Only '+F(left)+' left this month.';
-  if(spent>=BUDGET) dEl.innerHTML='🚫 <strong>Monthly limit reached!</strong> You\'ve hit LKR 100,000.';
+  if(spent>=WARN&&spent<BUDGET) wEl.innerHTML='⚠️ <strong>Almost there!</strong> Only '+F(left)+' left of your LKR '+FN(BUDGET)+' limit.';
+  if(spent>=BUDGET) dEl.innerHTML='🚫 <strong>Monthly limit reached!</strong> You\'ve hit your LKR '+FN(BUDGET)+' limit.';
   document.getElementById('sp-month-lbl').textContent=m+' spending';
   document.getElementById('sp-big').textContent=F(spent);
-  document.getElementById('sp-sub').textContent=pct+'% of LKR 100,000 monthly limit';
+  document.getElementById('sp-sub').textContent=pct+'% of LKR '+FN(BUDGET)+' monthly limit';
   document.getElementById('sp-bar').style.width=pct+'%';
   document.getElementById('sp-slbl').textContent='Spent: '+F(spent);
   document.getElementById('sp-llbl').textContent='Left: '+F(left);
@@ -543,6 +551,8 @@ function renderBudget(){
     <div class="sm"><div class="sml">💵 Income</div><div class="smv c-blue">${FN(totalInc(m))}</div></div>
     <div class="sm"><div class="sml">🏦 Saved</div><div class="smv ${saved>=0?'c-green':'c-red'}">${FN(saved)}</div></div>
   `;
+  document.getElementById('bdg-limit-lbl').textContent='LKR '+FN(BUDGET);
+  if(document.getElementById('budget-inp')) document.getElementById('budget-inp').value=BUDGET;
   document.getElementById('bdg-bar').style.cssText=`width:${pct}%;background:${bc};`;
   document.getElementById('bdg-pct').textContent=pct+'%';
   document.getElementById('bdg-slbl').textContent='Spent: '+F(spent);
@@ -695,11 +705,22 @@ function delCat(key){
   saveData();renderBudget();renderSpend();
 }
 
+function updateBudget(v){
+  if(!v||v<1000) return;
+  BUDGET=v;
+  WARN=Math.round(BUDGET*0.95);
+  S.budget=BUDGET;
+  saveData();
+  renderBudget();
+  renderSpend();
+}
 document.getElementById('qa-amt').addEventListener('keydown',e=>{if(e.key==='Enter')qaAdd();});
 document.getElementById('qa-date').value=todayISO();
 document.getElementById('fd-date').value=todayISO();
 
 loadData();
+BUDGET=S.budget||100000;
+WARN=Math.round(BUDGET*0.95);
 renderSpend();
 </script>
 </body>
