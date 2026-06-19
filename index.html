@@ -221,14 +221,14 @@ html,body{font-family:'Inter',sans-serif;background:#f2f3f8;color:#1a1a2e;font-s
       <span class="amt-prefix">LKR</span>
       <input type="number" class="qa-amt" id="qa-amt" placeholder="0" min="1" inputmode="numeric" oninput="checkBtn()">
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;">
-      <div>
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+      <div style="flex:0 0 auto;">
         <p class="stitle" style="margin-bottom:7px;">Date</p>
-        <input type="date" id="qa-date" onchange="onDateChange()" style="width:100%;font-size:13px;padding:11px 12px;border:1.5px solid #e8e8e8;border-radius:13px;background:#fafafa;color:#1a1a1a;outline:none;font-family:'Inter',sans-serif;">
+        <input type="date" id="qa-date" onchange="onDateChange()" style="font-size:13px;padding:11px 12px;border:1.5px solid #eaeaf0;border-radius:13px;background:#f8f8fc;color:#1a1a2e;outline:none;font-family:'Inter',sans-serif;width:150px;">
       </div>
-      <div>
+      <div style="flex:1;min-width:0;">
         <p class="stitle" style="margin-bottom:7px;">Note <span style="font-weight:400;text-transform:none;letter-spacing:0;color:#ccc;">optional</span></p>
-        <input type="text" id="qa-note" placeholder="e.g. KFC, Uber" style="width:100%;font-size:13px;padding:11px 12px;border:1.5px solid #e8e8e8;border-radius:13px;background:#fafafa;color:#1a1a1a;outline:none;font-family:'Inter',sans-serif;">
+        <input type="text" id="qa-note" placeholder="e.g. KFC, Uber" style="width:100%;font-size:13px;padding:11px 12px;border:1.5px solid #eaeaf0;border-radius:13px;background:#f8f8fc;color:#1a1a2e;outline:none;font-family:'Inter',sans-serif;">
       </div>
     </div>
     <button class="add-big" id="add-btn" onclick="qaAdd()" disabled>Add Expense</button>
