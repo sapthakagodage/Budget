@@ -618,20 +618,12 @@ function renderBudget(){
   const bc=spent>=BUDGET?'#dc2626':spent>=WARN?'#d97706':'#0e7d4f';
   document.getElementById('bdg-summary').innerHTML=`
     <div class="sm" style="background:linear-gradient(135deg,#fff8f0,#fef3c7);border-color:#fde68a;">
-      <div class="sml" style="color:#92400e;">💸 Total spent</div>
+      <div class="sml" style="color:#92400e;">💸 Total Spent</div>
       <div class="smv ${spent>=WARN?'c-warn':'c-dark'}">${FN(spent)}</div>
     </div>
     <div class="sm" style="background:${left===0?'linear-gradient(135deg,#fff5f5,#fee2e2)':left<10000?'linear-gradient(135deg,#fff8f0,#fef3c7)':'linear-gradient(135deg,#f0fdf4,#dcfce7)'};border-color:${left===0?'#fca5a5':left<10000?'#fde68a':'#bbf7d0'};">
       <div class="sml" style="color:${left===0?'#991b1b':left<10000?'#92400e':'#14532d'};">💚 Remaining</div>
       <div class="smv ${left===0?'c-red':left<10000?'c-warn':'c-green'}">${FN(left)}</div>
-    </div>
-    <div class="sm" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-color:#bbf7d0;">
-      <div class="sml" style="color:#14532d;">🏦 LKR balance</div>
-      <div class="smv c-green">${FN(S.lkrBank)}</div>
-    </div>
-    <div class="sm" style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border-color:#bfdbfe;">
-      <div class="sml" style="color:#1e40af;">🇦🇺 AUD balance</div>
-      <div class="smv c-blue">${S.audBank.toFixed(0)}</div>
     </div>
   `;
   document.getElementById('bdg-limit-lbl').textContent='LKR '+FN(BUDGET);
@@ -679,20 +671,12 @@ function renderPlan(){
   document.getElementById('monthTabs').innerHTML=MONTHS.map(mo=>`<button class="mtab${mo===m?' active':''}" onclick="setMonth('${mo}')">${mo}</button>`).join('');
 
   document.getElementById('plan-summary').innerHTML=`
-    <div class="sm" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-color:#bbf7d0;">
-      <div class="sml" style="color:#14532d;">🏦 LKR balance</div>
-      <div class="smv c-green">${FN(S.lkrBank)}</div>
-    </div>
-    <div class="sm" style="background:linear-gradient(135deg,#eff6ff,#dbeafe);border-color:#bfdbfe;">
-      <div class="sml" style="color:#1e40af;">🇦🇺 AUD balance</div>
-      <div class="smv c-blue">${audTotal.toFixed(0)}</div>
-    </div>
     <div class="sm" style="background:linear-gradient(135deg,#fff8f0,#fef3c7);border-color:#fde68a;">
       <div class="sml" style="color:#92400e;">💸 Spent (${m})</div>
       <div class="smv c-warn">${FN(spent)}</div>
     </div>
     <div class="sm" style="background:linear-gradient(135deg,#faf5ff,#ede9fe);border-color:#ddd6fe;">
-      <div class="sml" style="color:#4c1d95;">💰 Net worth</div>
+      <div class="sml" style="color:#4c1d95;">💰 Net Worth</div>
       <div class="smv c-purple">${FN(nw)}</div>
     </div>
   `;
